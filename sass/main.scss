@@ -1,0 +1,24 @@
+@font-face {
+    font-family: PT_Root;
+    src: url(../fonts/PT-Root-UI_Regular.ttf);
+}
+
+@import './variables';
+@import './mixins';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+body {
+    font-family: PT_Root;
+}
