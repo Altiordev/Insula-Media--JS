@@ -1,0 +1,407 @@
+.formContainer {
+    @include for960 {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.freshRoom {
+    position: relative;
+    padding: 80px 0 151px 0;
+    background: url('../images/img/section3-1-.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include for960 {
+        background-position: bottom;
+        padding: 0;
+        padding-top: 56px;
+        border-bottom: 8px solid $redColor;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 54px;
+        color: #FFFFFF;
+        margin-bottom: 48px;
+        @include for960 {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 150%;
+            margin-left: 48px;
+        }
+    }
+    &__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        @include for960 {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 76px;
+        }
+        &-left {
+            width: 600px;
+            background-color: #F0F0F0;
+            @include for960 {
+                width: 672px;
+                height: 640px;
+            }
+            @include for675 {
+                width: 500px;
+                height: 270px;
+            }
+            @include forMinMobile {
+                width: 272px;
+                height: 450px;
+            }
+            .left__top {
+                width: 100%;
+                height: 40px;
+                padding: 0 30px 0 40px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                background-color: #FFFFFF;
+                .time {
+                    @include for675 {
+                        display: none;
+                    }
+                }
+                @include forMinMobile {
+                    padding-left: 12px;
+                }
+            }
+            .left__menu {
+                position: relative;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-direction: column;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-text-decoration-line: underline;
+                text-decoration-line: underline;
+                cursor: pointer;
+                &-item {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    span {
+                        color: #000000;
+                        margin-right: 10px;
+                    }
+                    &:nth-child(2) {
+                        position: absolute;
+                        top: 31px;
+                        left: -6px;
+                        padding: 0px;
+                        width: 271px;
+                        height: 0px;
+                        background: #FFFFFF;
+                        overflow: hidden;
+                        transition: .5s linear;
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: start;
+                            gap: 10px;
+                        }
+                        &.active {
+                            height: 100px;
+                            padding: 10px;
+                        }
+                        @include forMinMobile {
+                            width: 238px;
+                        }
+                    }
+                }
+                span {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #000000;
+                }
+            }
+            .left__texts {
+                padding: 24px 16px 24px 40px;
+                height: 600px;
+                overflow: hidden scroll;
+                display: flex;
+                flex-direction: column;
+                transition: 2s linear;
+                p {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #000000;
+                    @include for675 {
+                        font-size: 14px;
+                        line-height: 130%;
+                    }
+                }
+                &.active {
+                    flex-direction: column-reverse;
+                }
+                @include for675 {
+                    height: 190px;
+                    padding: 16px;
+                }
+                @include forMinMobile {
+                    height: 392px;
+                }
+            }
+            .allView {
+                display: none;
+                @include for675 {
+                    width: 100%;
+                    height: 40px;
+                    background-color: #FFFFFF;
+                    display: flex;
+                    justify-content: center;
+                    column-gap: 18px;
+                    align-items: center;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 130%;
+                    cursor: pointer;
+                }
+                img {
+                    @include for675 {
+                        width: 18px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+        &-right {
+            width: 600px;
+            background-color: $darkBlueColor;
+            @include for960 {
+                width: 100%;
+            }
+            form {
+                padding: 91px 68px;
+                @include for960 {
+                    padding: 80px 88px;
+                }
+                h3 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: #FFFFFF;
+                    margin-bottom: 72px;
+                }
+                .input {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    row-gap: 64px;
+                    margin-bottom: 72px;
+                    .check {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-column-gap: 16px;
+                        -moz-column-gap: 16px;
+                        column-gap: 16px;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        column-gap: 16px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+                        input {
+                            opacity: 0;
+                            position: absolute;
+                            &:checked~.checkarea::after {
+                                display: inline-block;
+                            }
+                        }
+                        .checkarea {
+                            display: inline-block;
+                            position: relative;
+                            width: 16px;
+                            height: 16px;
+                            background-color: transparent;
+                            border: 2px solid #FFFFFF;
+                            &::after {
+                                content: '';
+                                background-image: url('../images/icons/icon-check.svg');
+                                width: 8px;
+                                height: 6px;
+                                position: absolute;
+                                top: 3px;
+                                left: 2.5px;
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                input {
+                    padding-bottom: 16px;
+                    border: none;
+                    border-bottom: 1px solid #FFFFFF;
+                    outline: none;
+                    background-color: transparent;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 23px;
+                    color: #FFFFFF;
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+                }
+                .btn {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    button {
+                        margin: 0 auto;
+                        padding: 20px 50px;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 23px;
+                        color: #FFFFFF;
+                        background-color: transparent;
+                        border: 2px solid $redColor;
+                        cursor: pointer;
+                        &:active {
+                            background-color: $redColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.howWeWork {
+    padding: 80px 0 88px 0;
+    background-color: $darkBlueColor;
+    @include forMobile {
+        padding: 32px 0;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 150%;
+        color: #FFFFFF;
+        margin-bottom: 48px;
+        @include forMobile {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+    &__cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        @include forMobile {
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 120px;
+            row-gap: 80px;
+        }
+        @include forMinMobile {
+            row-gap: 32px;
+        }
+    }
+}
+
+.cards__card {
+    width: 310px;
+    padding-left: 16px;
+    color: #FFFFFF;
+    border-left: 2px solid $redColor;
+    @include forMobile {
+        width: 200px;
+    }
+    @include forMinMobile {
+        width: 100%;
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        margin-bottom: 8px;
+        @include forMobile {
+            font-size: 18px;
+        }
+    }
+    &-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        margin-bottom: 8px;
+    }
+}
+
+.card__dropdown {
+    &-item {
+        height: 0px;
+        overflow: hidden;
+        &.active {
+            height: 100%;
+        }
+    }
+}
+
+.detalies {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-column-gap: 12px;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    cursor: pointer;
+}
+
+.dropdown__close {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.dropdown__open {
+    display: block;
+    &.active {
+        display: none;
+    }
+}
+
+.dropdown__img {
+    transition: .2s ease;
+    &.active {
+        transform: rotate(180deg);
+    }
+}

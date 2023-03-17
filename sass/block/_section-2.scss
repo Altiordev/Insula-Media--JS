@@ -1,0 +1,177 @@
+.islandPow {
+    padding: 80px 0;
+    background-color: #E5E5E5;
+    @include for1216 {
+        padding-top: 56px;
+        padding-bottom: 82px;
+    }
+    @include for960 {
+        padding-bottom: 72px;
+    }
+    @include for703 {
+        padding: 24px 0;
+    }
+    @include forMinMobile {
+        padding: 40px 0;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 54px;
+        color: #000000;
+        margin-bottom: 48px;
+        @include for1216 {
+            line-height: 150%;
+        }
+        @include for960 {
+            font-size: 24px;
+        }
+        @include for703 {
+            font-size: 18px;
+        }
+    }
+    &__card {
+        padding: 0;
+        width: 576px;
+        height: 340px;
+        position: relative;
+        background-color: #fff;
+        border: none;
+        border-radius: 0;
+        @include for1216 {
+            width: 448px;
+            height: 264px;
+        }
+        @include for960 {
+            width: 320px;
+            height: 256px;
+        }
+        @include for703 {
+            width: 248px;
+            height: 176px;
+        }
+        @include forMinMobile {
+            width: 272px;
+            height: 192px;
+        }
+        &:hover hr {
+            width: 100%;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+        .top {
+            position: absolute;
+            top: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        .img {
+            width: 112px;
+            height: 112px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background-color: $darkBlueColor;
+            margin-right: 48px;
+            @include for1216 {
+                width: 88px;
+                height: 88px;
+                margin-right: 32px;
+            }
+            @include for960 {
+                width: 56px;
+                height: 56px;
+                margin-right: 16px;
+            }
+            @include for703 {
+                width: 44px;
+                height: 44px;
+                margin-right: 12px;
+            }
+            img {
+                @include for960 {
+                    width: 24px;
+                    height: 24px;
+                }
+                @include for703 {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        span {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 130%;
+            color: #000000;
+            @include for960 {
+                font-size: 18px;
+            }
+            @include for703 {
+                font-size: 14px;
+            }
+        }
+        p {
+            width: 496px;
+            position: absolute;
+            top: 128px;
+            left: 40px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #000000;
+            @include for1216 {
+                width: 392px;
+                top: 104px;
+                left: 24px;
+                font-size: 18px;
+                line-height: 150%;
+            }
+            @include for960 {
+                width: 292px;
+                top: 72px;
+                left: 16px;
+                line-height: 130%;
+            }
+            @include for703 {
+                width: 228px;
+                top: 56px;
+                left: 12px;
+                font-size: 13px;
+            }
+            @include for372 {
+                width: 200px;
+            }
+        }
+        hr {
+            width: 360px;
+            height: 8px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: $redColor;
+            border: none;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+            @include for960 {
+                width: 204px;
+                height: 4px;
+            }
+            @include for703 {
+                width: 136px;
+            }
+        }
+    }
+}
