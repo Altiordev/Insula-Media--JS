@@ -1,0 +1,204 @@
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    padding: 12px 0;
+    background-color: rgba($color: #fff, $alpha: 0.7);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+nav * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileMenu {
+    text-decoration: underline;
+    display: none;
+    @include forMobile {
+        display: block;
+    }
+}
+
+.mobileMenu.active {
+    text-decoration: none;
+}
+
+.mobileMenuImg {
+    transition: .5s ease;
+}
+
+.mobileMenuImg.active {
+    transform: rotate(180deg);
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 75px;
+    column-gap: 75px;
+    transition: .5s linear;
+    &__link {
+        display: flex;
+        align-items: center;
+        -moz-column-gap: 12px;
+        column-gap: 12px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000000;
+        transition: .2s ease;
+        &:hover {
+            color: $redColor;
+        }
+        @include forMobile {
+            font-size: 15px;
+        }
+        div {
+            @include forMobile {
+                width: 32px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    &.active {
+        @include forMobile {
+            height: 135px;
+        }
+    }
+    @include forMobile {
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 208px;
+        height: 0px;
+        overflow: hidden;
+        padding-left: 20px;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
+
+// hero
+.hero {
+    padding-top: 143px;
+    padding-bottom: 119px;
+    background-color: #F0F0F0;
+    &__textArea {
+        max-width: 628px;
+        @include forTablet {
+            max-width: 448px;
+        }
+        @include forMobile {
+            max-width: 424px;
+        }
+        @include for703 {
+            text-align: center;
+        }
+    }
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 130%;
+        color: #000000;
+        margin-bottom: 32px;
+        @include forTablet {
+            font-size: 3vw;
+        }
+        @include forMobile {
+            font-size: 24px;
+            line-height: 130%;
+        }
+    }
+    &__p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #000000;
+        margin-bottom: 40px;
+        @include forTablet {
+            font-size: 2vw;
+        }
+        @include forMobile {
+            font-size: 18px;
+            line-height: 130%;
+        }
+    }
+    button {
+        width: 216px;
+        height: 64px;
+        @include forTablet {
+            width: 195px;
+        }
+        @include forMobile {
+            width: 144px;
+            height: 48px;
+            font-size: 14px;
+            line-height: 130%;
+        }
+        @include for372 {
+            margin: 0 !important;
+            width: 100px;
+            height: 36px;
+            font-size: 12px;
+        }
+    }
+    &__imgArea {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        @include forMobile {
+            width: 232px;
+        }
+    }
+    &__img {
+        max-width: 436px;
+        height: 617px;
+        -o-object-fit: contain;
+        object-fit: contain;
+        -o-object-position: center;
+        object-position: center;
+        border: 2px solid #161A2B;
+        @include forTablet {
+            max-width: 451px;
+            height: 638px;
+        }
+        @include forMobile {
+            max-width: 232px;
+            height: 328px;
+        }
+    }
+    @include forTablet {
+        padding-top: 77px;
+        padding-bottom: 21px;
+    }
+    @include forMobile {
+        padding-top: 136px;
+        padding-bottom: 80px;
+    }
+    @include for703 {
+        padding-top: 83px;
+        padding-bottom: 27px;
+    }
+}
+
+.hero-text-order {
+    @include for703 {
+        order: 1;
+    }
+}

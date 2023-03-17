@@ -1,0 +1,47 @@
+footer {
+    padding: 40px 0 40px 0;
+    background-color: #161A2B;
+}
+
+.footer {
+    &__contacts {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include for837 {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 18px;
+        }
+        div {
+            display: flex;
+            -moz-column-gap: 16px;
+            column-gap: 16px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: #FFFFFF;
+            @include for837 {
+                width: 100%;
+                justify-content: space-between;
+            }
+            @include for372 {
+                font-size: 12px;
+            }
+            a {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 150%;
+                color: #FFFFFF;
+                transition: 0.2s ease-in;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                @include for372 {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
